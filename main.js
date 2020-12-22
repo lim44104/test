@@ -8,8 +8,9 @@ function character(){
         connection();
     }
     else if (name !== null && name!== "") {
-        document.getElementById("connectForm");
-        document.addEventListener("submit",connection);
+        document
+            .getElementById("connectForm")
+            .addEventListener("submit",connection);
     }
     else{
         document.getElementById("characterSection").innerHTML = '<h2 id = "characterTitle> Enter character above... </h2>';
@@ -23,9 +24,10 @@ function connection(){
     const xhr = new XMLHttpRequest();
     const name = document.getElementById("name").value;
     const params = "name=" + name;
+    const url='./connect/search-name.php?'+ params
 
-    xhr.open("GET", "./connect/search-name.php"+"?" + params, true);
-    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); 
+    xhr.open("GET", url, true);
+    //xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); 
     xhr.onloadstart = function() {
         document.getElementById("characterLoading").innerHTML = '<strong id = "spinnerText" class="text-primary">Loading character...</strong>' + 
         '<div class="text-primary spinner-border ml-auto" role="status" ' +
