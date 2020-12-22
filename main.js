@@ -22,7 +22,7 @@ function connection(){
 
     const xhr = new XMLHttpRequest();
     const name = document.getElementById("name").value;
-    const params = "name" + name;
+    const params = "name=" + name;
 
     xhr.open("GET","./connect/search-name.php?" + params, true);
     xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
