@@ -38,7 +38,7 @@ function connection(){
         if (this.status == 200){
             const result = JSON.parse(this.responseText);
             console.log(result);
-
+            /*
             if(result["data"].count ===0){
                 document.getElementById("characterSection").innerHTML = '<h2 id="characterTitle"><span style="font-weight:bold;">No result for '+name+"</span>"+". Please Try Again.</h2>";
 
@@ -50,6 +50,7 @@ function connection(){
 
                 document.getElementById("characterLoading").innerHTML = "";
                 document.getElementById("comicLoading").innerHTML = "";
+            
             }
             else{
                 const characterAttributes = result["data"].result[0],
@@ -88,8 +89,9 @@ function connection(){
 
                 document.getElementById("characterSection").innerHTML = res;
 
-                comics(characterID)
-            }
+                //comics(characterID)
+            
+            }*/
         }
         else{
             document.getElementById("characterSection").innerHTML = '<h2 id="characterTitle">Request not received</h2>';
