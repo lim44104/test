@@ -28,15 +28,15 @@ function connection(){
 
     xhr.open("GET", url, true);
     //xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); 
-    xhr.onloadstart = function() {
+    xhr.onloadstart = () => {
         document.getElementById("characterLoading").innerHTML = '<strong id = "spinnerText" class="text-primary">Loading character...</strong>' + 
         '<div class="text-primary spinner-border ml-auto" role="status" ' +
         'aria-hidden="true" id="spinner"></div>';
     }
-    xhr.onerror = function(){
+    xhr.onerror = () =>{
         document.getElementById("characterSection").innerHTML = '<h2 id="characterTitle> An error has occured, check your connection.</h2>';
     }
-    xhr.onload = function(){
+    xhr.onload = () =>{
         if (this.status == 200){
             const result = JSON.parse(this.responseText);
             console.log(result);
@@ -99,7 +99,7 @@ function connection(){
             document.getElementById("characterSection").innerHTML = '<h2 id="characterTitle">Request not received</h2>';
         }
     }
-    xhr.onloadend = function(){
+    xhr.onloadend = () =>{
         document.getElementById("characterLoading").innerHTML = "";
     }
     xhr.send()
