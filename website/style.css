@@ -22,7 +22,7 @@ body {
 a:link,
 a:visited{
   color: orangered;
-  text-decoration: underline;
+  text-decoration: none;
   display: inline-block;
   transition: all 0.3s;
 }
@@ -41,6 +41,14 @@ a:active{
 }
 
 .maintitle{
+  color: white;
+}
+
+.introduction{
+  color: white;
+}
+
+.foot{
   color: white;
 }
 
