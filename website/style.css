@@ -1,4 +1,63 @@
 /* Move down content because we have a fixed navbar that is 3.5rem tall */
 body {
   padding-top: 3.5rem;
+  background-color:black;
 }
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+a:link,
+a:visited{
+  color: orangered;
+  text-decoration: underline;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+a:hover,
+a:active{
+  color: white;
+  background-color:orangered;
+  box-shadow: 0 1rem 2rem rgba(black,0.4);
+  transform: rotate(5deg) scale(1.2);
+  padding: 2px;
+}
+
+.jumbotron{
+  background-color: black;
+}
+
+.maintitle{
+  color: white;
+}
+
+.character-search-box, .search-character-button{
+  border-radius: 0;
+}
+
+.search-character-button{
+  background-color: orangered;
+}
+
+#characterTitle, #comicTitle{
+  color:white;
+}
+
+.card{
+  border: none;
+  border-radius: 2px;
+}
+
