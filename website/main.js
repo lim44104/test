@@ -1,7 +1,7 @@
 function character(){
-    let urlQueryParameters = new URLSearchParams(window.loacation.search),
+    let urlQueryParameters = new URLSearchParams(window.location.search),
         queryParameterName = urlQueryParameters.get("name"),
-        name = document.getElementById("name").nodeValue;
+        name = document.getElementById("name").value;
 
     if (queryParameterName !== null && queryParameterName!== ""){
         document.getElementById("name").value = queryParameterName;
@@ -37,6 +37,7 @@ function connection(){
     xhr.onload = function(){
         if (this.status == 200){
             const result = JSON.parse(this.responseText);
+            console.log(result);
 
             if(result["data"].count ===0){
                 document.getElementById("characterSection").innerHTML = '<h2 id="characterTitle"><span style="font-weight:bold;">No result for '+name+"</span>"+". Please Try Again.</h2>";
