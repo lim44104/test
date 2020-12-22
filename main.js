@@ -24,8 +24,8 @@ function connection(){
     const name = document.getElementById("name").value;
     const params = "name=" + name;
 
-    xhr.open("GET","./connect/search-name.php?" + params, true);
-    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+    xhr.open("GET", "./connections/name-search.php?" + params, true);
+    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); 
     xhr.onloadstart = function() {
         document.getElementById("characterLoading").innerHTML = '<strong id = "spinnerText" class="text-primary">Loading character...</strong>' + 
         '<div class="text-primary spinner-border ml-auto" role="status" ' +
