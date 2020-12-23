@@ -28,7 +28,8 @@ function character() {
     'apikey' : $public_key,
     'ts' : $ts,
     'hash' : $hash,*/
-
+  
+    /*
     var publickey = config.apikey;
     //var secretkey = config.SECRET_KEY;  
     var c_name = config.name;  
@@ -36,6 +37,7 @@ function character() {
     var ts = config.ts;
     var hash = config.hash;
     var order = config.orderBy;
+    */
 
   
     const xhr = new XMLHttpRequest();
