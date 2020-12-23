@@ -44,7 +44,7 @@ function character() {
     const name = document.getElementById("name").value;
     const params = "name=" + name;
   
-    xhr.open("GET", "./connect/search-name.php?" + params, true);
+    //xhr.open("GET", "./connect/search-name.php?" + params, true);
     //xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); 
     xhr.open("GET", "./connect/search-name.php?" + params, true);
     xhr.onloadstart = function() {
