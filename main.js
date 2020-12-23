@@ -21,6 +21,22 @@ function character() {
   function connection() {
     document.getElementById("characterLoading").innerHTML = "";
     document.getElementById("comicLoading").innerHTML = "";
+
+    /*"name" : $name_to_search, // ""
+    "orderBy" : "name",
+    "limit" : "20",
+    'apikey' : $public_key,
+    'ts' : $ts,
+    'hash' : $hash,*/
+
+    var publickey = config.apikey;
+    //var secretkey = config.SECRET_KEY;  
+    var c_name = config.name;  
+    var limit = config.limit;
+    var ts = config.ts;
+    var hash = config.hash;
+    var order = config.orderBy;
+
   
     const xhr = new XMLHttpRequest();
     const name = document.getElementById("name").value;
@@ -28,6 +44,7 @@ function character() {
   
     xhr.open("GET", "./connect/search-name.php?" + params, true);
     //xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); 
+    xhr.open("GET", "./connect/search-name.php?" + params, true);
     xhr.onloadstart = function() {
       document.getElementById("characterLoading").innerHTML =
       '<strong id="spinnerText" class="text-primary">Loading character...</strong>' +
