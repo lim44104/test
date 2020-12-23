@@ -29,15 +29,7 @@ function character() {
     'ts' : $ts,
     'hash' : $hash,*/
   
-    /*
-    var publickey = config.apikey;
-    //var secretkey = config.SECRET_KEY;  
-    var c_name = config.name;  
-    var limit = config.limit;
-    var ts = config.ts;
-    var hash = config.hash;
-    var order = config.orderBy;
-    */
+    
 
   
     const xhr = new XMLHttpRequest();
