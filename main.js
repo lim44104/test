@@ -22,16 +22,6 @@ function character() {
     document.getElementById("characterLoading").innerHTML = "";
     document.getElementById("comicLoading").innerHTML = "";
 
-    /*"name" : $name_to_search, // ""
-    "orderBy" : "name",
-    "limit" : "20",
-    'apikey' : $public_key,
-    'ts' : $ts,
-    'hash' : $hash,*/
-  
-    
-
-  
     const xhr = new XMLHttpRequest();
     const name = document.getElementById("name").value;
     const params = "name=" + name;
